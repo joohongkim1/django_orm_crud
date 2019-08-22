@@ -203,3 +203,18 @@ article 인스턴스 호출 후 값 변경하여 `save()` 함수 실행
 >>> article.save()
 ```
 
+```bash
+$ pip install django-extensions
+```
+
+```python
+settings.py 에 등록
+INSTALLED_APPS = [
+	django_extensions,
+	]
+```
+
+```python
+$ python manage.py shell_plus
+```
+

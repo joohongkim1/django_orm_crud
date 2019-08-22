@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}New{% endblock title %}
+
+{% block content %}
+<h1>게시글 작성</h1>
+<form action="/articles/create/">
+  <label for="title">Title</label><br>  <!-- label 태그는 해당 input의 id값을 참조한다.-->
+  <input id="title" type="text" name="title"><br>
+  <label for="content">Content</label><br>
+  <textarea id="content" name="content"></textarea><br>
+  <button type="submit">작성</button><br>
+  <a href="/articles/index">뒤로가기</a>
+</form>
+{% endblock content %}
+

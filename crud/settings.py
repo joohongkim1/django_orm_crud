@@ -33,7 +33,11 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # local apps
     'articles',
-    
+
+    # third party apps
+    'django_extensions',   # 설치 시에는 -로 했지만 등록 시에는 _(언더바)로 해야한다.
+
+    # django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -57,7 +61,7 @@ ROOT_URLCONF = 'crud.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'crud', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
